@@ -12,6 +12,8 @@ node_modules
 # dist files
 public/bundle.*
 public/index.html
+public/vendor/
+public/vendor.*
 
 # dev files
 public/miru-connect.js
