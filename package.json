@@ -4,6 +4,7 @@
   "description": "TODO",
   "main": ".js",
   "scripts": {
+    "watch": "npm run html:src && /Users/mollie/code/miru/srccli.js -p public -w [ npm run watch:js -o public/bundle.js -r bytes.written ] -w [ npm run watch:css -o public/bundle.css ] -t public/index.html",
     "build": "npm run build:src && npm run uglify && npm run html",
     "html": "cp templates/index-production.html public/index.html",
     "html:src": "cp templates/index-src.html public/index.html",
