@@ -4,6 +4,20 @@
   "description": "TODO",
   "main": ".js",
   "scripts": {
+    "build": "npm run build:src && npm run uglify && npm run html",
+    "html": "cp templates/index-production.html public/index.html",
+    "html:src": "cp templates/index-src.html public/index.html",
+    "build:src": "npm run build:js && npm run build:css && npm run html:src",
+    "build:js": "browserify --bare -t [ babelify --presets [ env ] ] src/main.js -o public/bundle.js",
+    "watch:js": "watchify --debug --verbose --bare -t [ babelify --presets [ env ] ] src/main.js -o public/bundle.js",
+    "build:css": "stylus -u autoprefixer-stylus src/main.styl -o public/bundle.css",
+    "watch:css": "stylus -w -u autoprefixer-stylus src/main.styl -o public/bundle.css",
+    "uglify": "npm run uglify:js && npm run uglify:css",
+    "uglify:js": "uglifyjs public/bundle.js -cmo public/bundle.min.js",
+    "uglify:css": "uglifycss public/bundle.css --output public/bundle.min.css",
+    "prepublish": "npm run build && npm test",
+    "lint": "spacestandard src/**.js",
+    "fixlint": "spacestandard --fix src/**.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -21,5 +35,16 @@
     "email": "talmo.christian@gmail.com"
   },
   "dependencies": {},
-  "devDependencies": {}
+  "devDependencies": {
+    "autoprefixer-stylus": "~0.14.0",
+    "babel-core": "~6.26.3",
+    "babel-preset-env": "~1.7.0",
+    "babelify": "~8.0.0",
+    "browserify": "~16.2.2",
+    "spacestandard": "~0.2.0",
+    "stylus": "~0.54.5",
+    "uglify-js": "~3.4.8",
+    "uglifycss": "0.0.29",
+    "watchify": "~3.11.0"
+  }
 }
