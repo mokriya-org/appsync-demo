@@ -1,0 +1,25 @@
+{
+  "name": "aws-appsync-demo",
+  "version": "0.0.0",
+  "description": "TODO",
+  "main": ".js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    ""
+  ],
+  "author": "talmobi <talmo.christian@gmail.com>",
+  "license": "UNLICENSED",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/talmobi/"
+  },
+  "bugs": {
+    "url": "https://github.com/talmobi//issues",
+    "email": "talmo.christian@gmail.com"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}
