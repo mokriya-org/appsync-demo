@@ -9,3 +9,9 @@ node_modules
 # mac files
 *.DS_Store
 
+# dist files
+public/bundle.*
+public/index.html
+
+# dev files
+public/miru-connect.js
