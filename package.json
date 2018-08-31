@@ -50,7 +50,7 @@
     "babelify": "~8.0.0",
     "browserify": "~16.2.2",
     "concat": "~1.0.3",
-    "miru": "~0.12.0",
+    "miru": "~0.12.1",
     "spacestandard": "~0.2.0",
     "stylus": "~0.54.5",
     "uglify-js": "~3.4.8",
