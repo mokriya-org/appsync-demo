@@ -40,7 +40,13 @@ Not entirely sure how the GraphQL subscriptions are implemented here either. Sup
 `npm run build`
 
 # Running
-`npm start`
+`npm start` runs locally at `http://localhost:8080`
 
 # Development
 `npm run watch` and open browser at `http://localhost:4040`
+
+# Config
+The AWS AppSync config options ( url, api keys etc ) is at `src/AppSync.js`. These credentials can be seen and even downloaded directly from the AWS AppSync Console.
+
+# Deployment
+`now` -- this will not work for you unless you know what `now` is and you have an account at zeit.co.
