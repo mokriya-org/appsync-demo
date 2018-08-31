@@ -4,7 +4,7 @@
   "description": "Minimalistic AWS AppSync Demo using aws-amplify",
   "main": ".js",
   "scripts": {
-    "start": "http-server public/",
+    "start": "npm run html && http-server public/",
     "build": "npm run build:src && npm run uglify && npm run html && npm run vendor",
     "build:src": "npm run build:js && npm run build:css && npm run html:src && npm run vendor:src",
     "now-build": "npm run build",
