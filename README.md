@@ -55,3 +55,15 @@ The AWS AppSync config options ( url, api keys etc ) is at `src/AppSync.js`. The
 
 # Deployment
 `now` -- this will not work for you unless you know what `now` is and you have an account at zeit.co.
+
+# Other
+The `resolver` (GraphQL term) DataSource DynamoDB running behind the AWS AppSync Console thingy
+is *NOT* currently returning the chat messages sorted by `createdAt` unix mstime (31.08.2018).
+
+The amount of records returned is limited at 1000 If I recall correctly (configurable at the AWS AppSync Console).
+I did look into trying to configure the DynamoDB resolver to do that but couldn't get it to work.
+
+You might have open up the actual table configuration and implement secondary indexes -- and then
+configure the resolver to somehow take that into account.
+
+That's why we sort them here on the client-side... this is clearly not ideal but works for the demo.
