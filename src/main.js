@@ -228,22 +228,21 @@ function getIpAddress ( callback ) {
 /*
  * Send an startup message just for fun.
  **/
-if ( Number( window.location.port ) > 1000 ) {
-  console.log( 'skipping startup message on dev-like environment' )
-} else {
-  getIpAddress( function ( ip ) {
-    postMessage(
-      {
-        from: `[${ ip || 'unknown' }]`,
-        content: `Demo App Loaded.`
-      },
-      function ( err, message ) {
-        if ( err ) throw err
-      }
-    )
-  } )
-}
-
+// if ( Number( window.location.port ) > 1000 ) {
+//   console.log( 'skipping startup message on dev-like environment' )
+// } else {
+//   getIpAddress( function ( ip ) {
+//     postMessage(
+//       {
+//         from: `[${ ip || 'unknown' }]`,
+//         content: `Demo App Loaded.`
+//       },
+//       function ( err, message ) {
+//         if ( err ) throw err
+//       }
+//     )
+//   } )
+// }
 
 function getAllMessages ( callback ) {
   API.graphql( {
