@@ -45,7 +45,7 @@ Not entirely sure how the GraphQL subscriptions are implemented here either. Sup
 `npm run build`
 
 # Running
-`npm start` runs locally at `http://localhost:8080`
+`npm start` runs locally at `http://localhost:5000`
 
 # Development
 `npm run watch` and open browser at `http://localhost:4040`
